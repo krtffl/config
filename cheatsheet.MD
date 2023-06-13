@@ -58,7 +58,7 @@ gg -> all the way up
 
 va + { -> selects everything within curly braces
 vi -> same but inside
-
+yap -> pase paragraph
 PLUGINS
 
 leader pf -> find files in project overall
@@ -74,14 +74,36 @@ C-s -> nav 4
 
 leader u -> undo tree
 C-h + H/L -> navigate 
+C-w + H/L -> naviate too?
+C-w + o -> close
 
 leader gs -> git status
+within gs -> = show changes / = undo
+select a chunk and S -> commits chunk
+S on file -> stage file
+
+czz -> stage changes
+cc -> commit 
+czA -> conflict
+C-w o -> jump up
+dv on main -> see changes in both sides
+C-w = -> equal length of the windows
+
+gu -> select left
+gh -> select right
+leader p -> push
+
+
 
 C-p/C-n -> autocompletion prev/next
 C-y -> accept autocompletion
 C-space -> start completion
 
 gd -> jump to definition
+C-^ -> go to previous file
+C-o -> go back to previous file location
+
+ci" -> delete string
 
 :%s -> do to the whole files
 
@@ -89,6 +111,5 @@ J/K on V mode -> move selection
 J append next line into current one
 
 leader p -> copy and keep register
-
 leader y -> copy into clipboard register
-# vim cheatsheet 
+
