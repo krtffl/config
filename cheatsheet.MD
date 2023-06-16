@@ -1,115 +1,135 @@
+# vim cheatcodes 
 
-% create a new file from tree
+## netrw nav
+- `<leader>pv` open tree
+- `%` create a new file from tree
 
-leader pv -> open netrw
+## buffer nav
+- `h` left
+- `j` down
+- `k` up
+- `l` right
 
-h j k l -> basic motions
+### horizontal nav
 
-w -> word forward
-b -> word backward
+- `w` jump word forw
+- `b` jump word backw
+- `_` jump beginning
+- `$` jump end
+- `0` jump 0th
 
-d -> delete command
-u -> undo command
-C-r -> undo undo command
+- `t + <CHAR>` jump to char right
+- `f + <CHAR>` jump prev to char right
+- `T + <CHAR>` jump to char ñeft
+- `F + <CHAR>` jump prev to char left
+    - `;` next iter
+    - `,` prev iter
+    
+### vertical nav
 
-i -> insert mode 
-a -> move left and insert mode
-I -> go to beginning of line in insert mode
-A -> go to end of the line in insert mode
-o -> new line below in insert mode
-O -> new line above in insert mode
+- `{` paragraph up
+- `}` paragraph down
 
-v -> visual mode
-y -> yank (copy selection)
-p -> paste selection
+- `<C-u>` half page up
+- `<C-d>` half page down
 
-S-v -> visual line mode
+- `G` end of file
+- `gg` start of file
 
-_ -> beginning
-$ -> end
-0 -> 0th character
+- `va{` select within curly
+- `vi{` select inside curly
+- `yap` paste paragraph
 
-f + char -> jumps to char
-t + char -> jumps up to char 
-    -> ; next
-    -> , previous
+## actions
 
-F or T -> jumps backwards
+- `d` delete selection
+- `u` undo
+- `<C-r>` undo²
 
-:Ex -> open filetree
-:Sex! -> open filetree to the side vertical split
-:Sex -> open filetree to the side horizontal split
+- `i` insert mode on the spot
+- `a` insert mode left
 
-{ -> up by paragraph
-} -> down by paragraph
+- `I` insert mode line start
+- `A` insert mode line end
 
-C-u -> jump half page up
-C-d -> jump half page down
+- `o` insert mode new line down
+- `O` insert mode new line up
 
-G -> all the way down
-gg -> all the way up
+- `v` visual mode
+- `<Sh-v>` visual line
 
-: + line -> to that line
-/ + text -> search -> n/N to go next/prev
-? + text -> backwards search
+- `y` yank selection
+- `p` paste
 
-* on word -> search that word
-# on word -> search that word backwards
+- `ci"` delete string
+- `J` append next line to current
 
-va + { -> selects everything within curly braces
-vi -> same but inside
-yap -> pase paragraph
-PLUGINS
+- `<leader>y` yank to clipboard
+- `<leader>p` pase from clipboard
 
-leader pf -> find files in project overall
-leader ps -> find by word
-C-p -> find files in git
+## commands 
 
-leader a -> add to harpoon
-C-e -> toggle quick menu
-C-h -> nav 1
-C-t -> nav 2
-C-n -> nav 3
-C-s -> nav 4
+- `:Ex` open netrw
+- `:Sex!`open netrw to the side vertical split
+- `:Sex` open filetree to the side horizontal split
 
-leader u -> undo tree
+
+- `: + line` jump to line
+- `/ + text` search right
+    - `n` next
+    - `N` prev
+- `? + text` -> search left
+
+- `* on word` search word
+- `# on word` search word backw
+
+## plugins
+
+### fuzzy finding
+
+- `<leader>pf` fuzzy finder in project
+- `<leader>ps` fuzzy finder by word
+- `<C-p>` fuzzy finder in git dir
+
+### harpoon
+
+- `<leader>a` add file
+- `<C-e>` file 1
+- `<C-h>` file 2
+- `<C-t>` file 3
+- `<C-n>` file 4
+- `<C-s>` toggle menu
+
+### undo tree
+
+- `<leader>u` open tree
 C-h + H/L -> navigate 
 C-w + H/L -> naviate too?
 C-w + o -> close
 
-leader gs -> git status
-within gs -> = show changes / = undo
-select a chunk and S -> commits chunk
-S on file -> stage file
+### git
 
-czz -> stage changes
-cc -> commit 
-czA -> conflict
-C-w o -> jump up
-dv on main -> see changes in both sides
-C-w = -> equal length of the windows
+- `<leader>gs` git status
+- `=` show changes
+- `S` stage chunk
+- `S` stage file
+- `czz` stage 
+- `cc` commit
+- `czA` show conflicts
+- `dv` show changes splitview
+- `gu` select left
+- `gh` select right 
+- `<leader>p` push
 
-gu -> select left
-gh -> select right
-leader p -> push
+### autocomplete
 
+- `<C-p>` prev
+- `<C-n>` next
+- `<C-y>` accept
+- `<C-<leader>>` display
 
+- `gd` go to def
+- `<C-^>` go to prev file
+- `<C-o>` go to prev loc
 
-C-p/C-n -> autocompletion prev/next
-C-y -> accept autocompletion
-C-space -> start completion
-
-gd -> jump to definition
-C-^ -> go to previous file
-C-o -> go back to previous file location
-
-ci" -> delete string
-
-:%s -> do to the whole files
-
-J/K on V mode -> move selection
-J append next line into current one
-
-leader p -> copy and keep register
-leader y -> copy into clipboard register
 
